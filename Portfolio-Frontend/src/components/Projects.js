@@ -5,18 +5,18 @@ import { Link } from "gatsby"
 
 const Projects = ({ projects, title, showlink }) => {
   return (
-    <section className="section projects">
+    <section className="section projects" id="projects">
       <Title title={title} />
       <div className="section-center project-center">
         {projects.map((project, index) => {
           return <Project key={project.id} index={index} {...project} />
         })}
       </div>
-      {showlink && (
+      {/* {showlink && (
         <Link to="/projects" className="btn center-btn">
-          projects
+          View More
         </Link>
-      )}
+      )} */}
     </section>
   )
 }
