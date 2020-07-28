@@ -29,10 +29,13 @@ const Hero = () => {
               Producing high quality responsive websites and exceptional user
               experience
             </h3>
-            <h4>Fullstack, Frontend, Backend</h4>
-            <Link to="/contact" className="btn">
-              contact me or resume
-            </Link>
+            <h4>Software Developer</h4>
+            <a
+              href="https://drive.google.com/file/d/1weh6-6UVk9m_-iROvY-OAj4SuN_mjDZ-/view"
+              className="btn"
+            >
+              View Resume
+            </a>
             <SocialLinks />
           </div>
         </article>

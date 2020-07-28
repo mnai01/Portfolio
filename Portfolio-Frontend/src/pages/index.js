@@ -43,7 +43,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <Hero />
-      <Services />
+      {/* <Services /> */}
       <Jobs />
       <Projects projects={projects} title="Featured Projects" showlink />
       {/* <ProjectsCards projects={projects} title="All Projects" showlink /> */}
