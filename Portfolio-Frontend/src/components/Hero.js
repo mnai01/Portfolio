@@ -19,7 +19,7 @@ const Hero = () => {
   const data = useStaticQuery(query)
   console.log(data.file.childImageSharp.fluid)
   return (
-    <header className="hero">
+    <header className="hero" id="home">
       <div className="section-center hero-center">
         <article className="hero-info">
           <div className="hero-centerage">

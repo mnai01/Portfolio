@@ -33,7 +33,7 @@ const Jobs = () => {
   console.log(jobs[value])
 
   return (
-    <section className="section jobs">
+    <section className="section jobs" id="experience">
       <Title title="experience" />
       <div className="jobs-center">
         <div className="btn-container">
@@ -50,8 +50,8 @@ const Jobs = () => {
           })}
         </div>
         <article className="job-info">
-          <h3>{company}</h3>
-          <h4>{position}</h4>
+          <h3>{position}</h3>
+          <h4>{company}</h4>
           <p className="job-date">{date}</p>
           {description.map(item => {
             return (
@@ -64,9 +64,9 @@ const Jobs = () => {
         </article>
       </div>
 
-      <Link to="/about" className="btn center-btn">
+      {/* <Link to="/about" className="btn center-btn">
         more info
-      </Link>
+      </Link> */}
     </section>
   )
 }
