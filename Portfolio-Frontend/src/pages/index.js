@@ -16,6 +16,7 @@ export const query = graphql`
         title
         github
         url
+        video
         description
         longDescription
         image {
