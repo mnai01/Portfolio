@@ -5,17 +5,19 @@ import Hero from "../components/Hero"
 import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
-import Blogs from "../components/Blogs"
+import ProjectsCards from "../components/ProjectsCards"
 
+// allStrapiProjects(filter: { feature: { eq: true } })
 export const query = graphql`
   {
-    allStrapiProjects(filter: { feature: { eq: true } }) {
+    allStrapiProjects {
       nodes {
         id
         title
         github
         url
         description
+        longDescription
         image {
           childImageSharp {
             fluid {
@@ -43,7 +45,8 @@ export default ({ data }) => {
       <Hero />
       <Services />
       <Jobs />
-      <Projects projects={projects} title="Features Projects" showlink />
+      <Projects projects={projects} title="Featured Projects" showlink />
+      {/* <ProjectsCards projects={projects} title="All Projects" showlink /> */}
     </Layout>
   )
 }

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import scrollTo from "gatsby-plugin-smoothscroll"
 const data = [
   {
     id: 1,
@@ -8,18 +9,13 @@ const data = [
   },
   {
     id: 2,
-    text: "about",
-    url: "/about/",
+    text: "experience",
+    url: "/experience/",
   },
   {
     id: 3,
     text: "projects",
     url: "/projects/",
-  },
-  {
-    id: 4,
-    text: "blog",
-    url: "/blog/",
   },
   {
     id: 5,
@@ -30,8 +26,15 @@ const data = [
 
 const tempLinks = data.map(link => {
   return (
-    <li key={link.id}>
-      <Link to={link.url}>{link.text}</Link>
+    <li
+      key={link.id}
+      onClick={() => {
+        scrollTo("#" + link.text)
+        console.log("#" + link.text)
+      }}
+    >
+      {/* Change to <Link to={link.url}>{link.text}<Link/> for page navigation */}
+      <a>{link.text}</a>
     </li>
   )
 })
