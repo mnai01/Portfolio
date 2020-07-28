@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import { FaGithubSquare, FaShareSquare, FaYoutube } from "react-icons/fa"
 import "react-responsive-modal/styles.css"
 import { Modal } from "react-responsive-modal"
 
@@ -14,6 +14,7 @@ const Project = ({
   url,
   image,
   index,
+  video,
 }) => {
   const [modal, setModal] = useState(false)
 
@@ -26,7 +27,9 @@ const Project = ({
           </span>
           <h3>{title}</h3>
           <Image className="modal_img" fluid={image.childImageSharp.fluid} />
-          <p className="project-desc">{longDescription}</p>
+          <p className="project-desc">
+            {longDescription != null ? longDescription : description}
+          </p>
           <div className="project-stack">
             {stack.map(item => {
               return <span key={item.id}>{item.title}</span>
@@ -36,12 +39,15 @@ const Project = ({
             <a href={github}>
               <FaGithubSquare className="project-icon" />
             </a>
-            {url != null ? (
+            {url != null && (
               <a href={url}>
                 <FaShareSquare className="project-icon" />
               </a>
-            ) : (
-              ""
+            )}
+            {video != null && (
+              <a href={video}>
+                <FaYoutube className="project-icon" />
+              </a>
             )}
           </div>
         </div>
@@ -64,12 +70,15 @@ const Project = ({
             <a href={github}>
               <FaGithubSquare className="project-icon" />
             </a>
-            {url != null ? (
+            {url != null && (
               <a href={url}>
                 <FaShareSquare className="project-icon" />
               </a>
-            ) : (
-              ""
+            )}
+            {video != null && (
+              <a href={video}>
+                <FaYoutube className="project-icon" />
+              </a>
             )}
           </div>
         </div>
