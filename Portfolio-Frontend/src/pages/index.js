@@ -6,6 +6,7 @@ import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import ProjectsCards from "../components/ProjectsCards"
+import SEO from "../components/SEO"
 
 // allStrapiProjects(filter: { feature: { eq: true } })
 export const query = graphql`
@@ -43,6 +44,10 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <SEO
+        title="Ian Matlak | Portfolio"
+        description="This is Ian Matlak's portfolio"
+      />
       <Hero />
       {/* <Services /> */}
       <Jobs />
