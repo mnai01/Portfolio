@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import Projects from "../components/Projects"
 const data = [
   {
     id: 1,
@@ -24,14 +25,22 @@ const data = [
   },
 ]
 
-const TempLinks = ({ toggleSidebar }) => {
+const TempLinks = ({ isOpen, toggleSidebar }) => {
+  const toggle = (isOpen, toggleSidebar, link) => {
+    if (isOpen === true) {
+      scrollTo("#" + link.text)
+      toggleSidebar()
+    } else {
+      scrollTo("#" + link.text)
+    }
+  }
+
   return data.map(link => {
     return (
       <li
         key={link.id}
         onClick={() => {
-          scrollTo("#" + link.text)
-          toggleSidebar()
+          toggle(isOpen, toggleSidebar, link)
         }}
       >
         {/* Change to <Link to={link.url}>{link.text}<Link/> for page navigation */}
@@ -42,10 +51,10 @@ const TempLinks = ({ toggleSidebar }) => {
 }
 // I KNOW WE CAN COMBINE IT !!!!!
 
-export default ({ styleClass, toggleSidebar }) => {
+export default ({ styleClass, isOpen, toggleSidebar }) => {
   return (
     <ul className={`page-links ${styleClass ? styleClass : ""}`}>
-      <TempLinks toggleSidebar={toggleSidebar} />
+      <TempLinks toggleSidebar={toggleSidebar} isOpen={isOpen} />
     </ul>
   )
 }
