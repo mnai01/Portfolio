@@ -645,6 +645,7 @@ Projects
 .project {
   display: grid;
   margin-bottom: 4rem;
+  cursor: pointer;
 }
 .project-img {
   border-top-left-radius: var(--radius);
