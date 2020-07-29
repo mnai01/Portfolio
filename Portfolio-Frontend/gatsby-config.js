@@ -6,9 +6,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: "WebDev Portfolio",
-    description: "This is WebDev Portfolio Site",
-    author: "@webdev",
+    title: "Ian Matlak Portfolio",
+    description: "Ian Matlak Portfolio Site",
+    author: "@IanMatlak",
+    siteUrl: `https://www.ianmatlak.com`,
   },
   plugins: [
     `gatsby-transformer-sharp`,
