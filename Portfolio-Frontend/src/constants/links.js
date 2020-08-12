@@ -18,11 +18,11 @@ const data = [
     text: "projects",
     url: "/projects/",
   },
-  {
-    id: 5,
-    text: "contact",
-    url: "/contact/",
-  },
+  // {
+  //   id: 5,
+  //   text: "contact",
+  //   url: "/contact/",
+  // },
 ]
 
 const TempLinks = ({ isOpen, toggleSidebar }) => {
