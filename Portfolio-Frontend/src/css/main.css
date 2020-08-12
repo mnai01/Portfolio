@@ -667,11 +667,16 @@ Projects
 .project:hover .project-img::after {
   opacity: 0;
 }
+
 .project-info {
   background: var(--clr-white);
   padding: 1rem 2rem;
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
+  transition: transform 250ms;
+}
+.project-info:hover {
+  transform: scale(1.05);
 }
 .project-number {
   display: inline-block;
@@ -716,6 +721,15 @@ Projects
 .project-icon:hover {
   color: var(--clr-primary-1);
 }
+@media screen and (max-width: 992px) {
+  .project-info {
+    transition: unset;
+  }
+  .project-info:hover {
+    transform: scale(1);
+  }
+}
+
 @media screen and (min-width: 576px) {
   .project-img {
     height: 19rem;
@@ -757,6 +771,17 @@ Projects
     text-align: left;
   }
 }
+
+/* .project-info:hover {
+  transform: scale(1.05);
+}
+.project-info {
+  background: var(--clr-white);
+  padding: 1rem 2rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  transition: transform 250ms;
+} */
 
 /*
 =============== 
