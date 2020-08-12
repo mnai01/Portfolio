@@ -39,7 +39,7 @@ const Project = ({
             <a href={github}>
               <FaGithubSquare className="project-icon" />
             </a>
-            {url != null && (
+            {url != null && url != "" && (
               <a href={url}>
                 <FaShareSquare className="project-icon" />
               </a>
@@ -52,25 +52,26 @@ const Project = ({
           </div>
         </div>
       </Modal>
-      <article className="project" onClick={setModal}>
+      <article className="project">
         <Image className="project-img" fluid={image.childImageSharp.fluid} />
         <div className="project-info">
-          {" "}
-          <span className="project-number">
-            {index + 1 <= 9 ? 0 + "" + (index + 1) : index + 1}.
-          </span>
-          <h3>{title}</h3>
-          <p className="project-desc">{description}</p>
-          <div className="project-stack">
-            {stack.map(item => {
-              return <span key={item.id}>{item.title}</span>
-            })}
+          <div onClick={setModal}>
+            <span className="project-number">
+              {index + 1 <= 9 ? 0 + "" + (index + 1) : index + 1}.
+            </span>
+            <h3>{title}</h3>
+            <p className="project-desc">{description}</p>
+            <div className="project-stack">
+              {stack.map(item => {
+                return <span key={item.id}>{item.title}</span>
+              })}
+            </div>
           </div>
           <div className="project-links">
             <a href={github}>
               <FaGithubSquare className="project-icon" />
             </a>
-            {url != null && (
+            {url != null && url != "" && (
               <a href={url}>
                 <FaShareSquare className="project-icon" />
               </a>
@@ -80,6 +81,9 @@ const Project = ({
                 <FaYoutube className="project-icon" />
               </a>
             )}
+            <h5 className="project-desc" onClick={setModal}>
+              Click card for more details
+            </h5>
           </div>
         </div>
       </article>
