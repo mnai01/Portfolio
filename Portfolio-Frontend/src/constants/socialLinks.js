@@ -33,7 +33,7 @@ const data = [
     id: 4,
     icon: <FaAddressCard className="social-icon"></FaAddressCard>,
     url:
-      "https://drive.google.com/file/d/11CrytYIkOdZFOOv_crgDumxRWNWxn5G4/view?usp=sharing",
+      "https://drive.google.com/file/d/1b7zPwv_qXcgfdb3fMoYW8tEV5ix2dnu4/view?usp=sharing",
   },
 ]
 const links = data.map(link => {
