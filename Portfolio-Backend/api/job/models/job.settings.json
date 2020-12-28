@@ -26,6 +26,10 @@
       "repeatable": true,
       "component": "description.job-description",
       "required": true
+    },
+    "listing_order": {
+      "type": "integer",
+      "unique": true
     }
   }
 }

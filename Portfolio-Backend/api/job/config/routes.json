@@ -1,6 +1,14 @@
 {
   "routes": [
     {
+      "method": "POST",
+      "path": "/emails",
+      "handler": "Email.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "GET",
       "path": "/jobs",
       "handler": "job.find",

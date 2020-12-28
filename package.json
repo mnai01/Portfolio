@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Ian Matlak Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \" cd Portfolio-Frontend && gatsby develop\" \" cd Portfolio-Backend && npm start \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnai01/Portfolio.git"
+  },
+  "author": "Ian Matlak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mnai01/Portfolio/issues"
+  },
+  "homepage": "https://github.com/mnai01/Portfolio#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "concurrently": "^5.3.0"
+  }
+}
