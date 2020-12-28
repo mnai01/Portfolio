@@ -54,8 +54,8 @@ const Project = ({
       </Modal>
       <article className="project">
         <Image className="project-img" fluid={image.childImageSharp.fluid} />
-        <div className="project-info">
-          <div onClick={setModal}>
+        <div className="project-info" onClick={setModal}>
+          <div>
             <span className="project-number">
               {index + 1 <= 9 ? 0 + "" + (index + 1) : index + 1}.
             </span>
