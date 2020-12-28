@@ -439,6 +439,7 @@ Hero
 }
 .hero .btn {
   margin-top: 1.25rem;
+  height: 2.5rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -1034,6 +1035,7 @@ Contact Page
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
+
 /*
 ===============
 Blog Template
@@ -1121,4 +1123,61 @@ Blog Template
     border-radius: var(--radius);
     box-shadow: var(--dark-shadow);
   }
+}
+
+/* 
+===============
+Email Modal
+===============
+*/
+.email-form {
+  border-radius: var(--radius);
+  /* text-align: center; */
+  /* box-shadow: var(--light-shadow); */
+  transition: var(--transition);
+  width: 90vw;
+  max-width: 35rem;
+}
+.email-form:hover {
+}
+.email-form h3 {
+  /* padding-top: 1.25rem; */
+  color: var(--clr-grey-5);
+}
+.submit-button {
+  width: 100%;
+  height: 2.5rem;
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-9);
+  border: 2px solid transparent;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: var(--spacing);
+  text-transform: uppercase;
+  border-radius: var(--radius);
+}
+.email-form-group {
+  padding: 1rem 0rem;
+}
+.email-form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  margin-bottom: 1.25rem;
+  background: var(--clr-grey-10);
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+.email-form-control::placeholder {
+  font-family: var(--ff-primary);
+  color: var(--clr-grey-8);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.react-responsive-modal-modal {
+  margin: auto !important;
+  border-radius: var(--radius);
 }

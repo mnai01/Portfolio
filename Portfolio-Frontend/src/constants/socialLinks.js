@@ -29,12 +29,12 @@ const data = [
     url:
       "https://devpost.com/mnai01?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav",
   },
-  {
-    id: 4,
-    icon: <FaAddressCard className="social-icon"></FaAddressCard>,
-    url:
-      "https://drive.google.com/file/d/1b7zPwv_qXcgfdb3fMoYW8tEV5ix2dnu4/view?usp=sharing",
-  },
+  // {
+  //   id: 4,
+  //   icon: <FaAddressCard className="social-icon"></FaAddressCard>,
+  //   url:
+  //     "https://drive.google.com/file/d/1b7zPwv_qXcgfdb3fMoYW8tEV5ix2dnu4/view?usp=sharing",
+  // },
 ]
 const links = data.map(link => {
   return (

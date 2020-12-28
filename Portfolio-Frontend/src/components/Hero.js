@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
+import Email from "./Email"
 
 const query = graphql`
   {
@@ -16,6 +17,16 @@ const query = graphql`
   }
 `
 const Hero = () => {
+  const [modal, setModal] = useState(false)
+
+  const handleModal = value => {
+    if (value) {
+      setModal(value)
+    } else {
+      setModal(!modal)
+    }
+  }
+
   const data = useStaticQuery(query)
   console.log(data.file.childImageSharp.fluid)
   return (
@@ -30,12 +41,10 @@ const Hero = () => {
               experience
             </h3>
             <h4>Software Developer</h4>
-            <a
-              href="https://drive.google.com/file/d/1b7zPwv_qXcgfdb3fMoYW8tEV5ix2dnu4/view?usp=sharing"
-              className="btn"
-            >
-              View Resume
-            </a>
+            <button onClick={() => setModal(!modal)} className="btn">
+              Request Resume
+            </button>
+            <Email modal={modal} handleModal={handleModal} />
             <SocialLinks />
           </div>
         </article>
