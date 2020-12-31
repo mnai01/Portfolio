@@ -190,7 +190,7 @@ p {
 /* social links */
 .social-links {
   margin-top: 2rem;
-  width: 15rem;
+  width: 7rem;
   display: flex;
   justify-content: space-between;
 }
@@ -1167,7 +1167,7 @@ Email Modal
   margin-bottom: 1.25rem;
   background: var(--clr-grey-10);
   border-radius: var(--radius);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: var(--spacing);
 }
 .email-form-control::placeholder {
@@ -1176,8 +1176,23 @@ Email Modal
   text-transform: uppercase;
   letter-spacing: var(--spacing);
 }
-
+.email-sucess {
+  padding: 25px;
+  margin-bottom: 0 !important;
+}
 .react-responsive-modal-modal {
   margin: auto !important;
+  border-radius: var(--radius);
+}
+.error {
+  border-color: rgb(225, 0, 0);
+  border-width: 3px;
+  border-style: solid;
+  border-radius: var(--radius);
+}
+.success {
+  border-color: rgb(22, 225, 22);
+  border-width: 3px;
+  border-style: solid;
   border-radius: var(--radius);
 }
