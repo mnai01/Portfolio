@@ -13,11 +13,11 @@ import {
 } from "react-icons/fa"
 
 const data = [
-  {
-    id: 1,
-    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "https://www.linkedin.com/in/ian-matlak-a8385b163/",
-  },
+  // {
+  //   id: 1,
+  //   icon: <FaLinkedin className="social-icon"></FaLinkedin>,
+  //   url: "https://www.linkedin.com/in/ian-m-a8385b163/",
+  // },
   {
     id: 2,
     icon: <FaGithub className="social-icon"></FaGithub>,
