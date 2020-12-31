@@ -193,7 +193,6 @@ p {
   width: 7rem;
   display: flex;
   justify-content: space-between;
-  margin: auto;
 }
 .social-link {
   font-size: 1.75rem;
