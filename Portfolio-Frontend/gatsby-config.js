@@ -6,9 +6,9 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Ian Matlak Portfolio",
-    description: "Ian Matlak Portfolio Site",
-    author: "@IanMatlak",
+    title: "Ian M Portfolio",
+    description: "Ian M Portfolio Site",
+    author: "@IanM",
     siteUrl: `https://www.ianmatlak.com`,
   },
   plugins: [
