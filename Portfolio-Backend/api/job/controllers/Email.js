@@ -1,6 +1,6 @@
 module.exports = {
   index: async (ctx) => {
-    const { to, text, company, email } = ctx.request.body;
+    const { text, company, email } = ctx.request.body;
     await strapi.plugins["email"].services.email.send({
       to: "Imatlak03@gmail.com",
       from: "Imatlak03@gmail.com",
