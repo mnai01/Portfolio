@@ -48,11 +48,6 @@ const links = data.map(link => {
 
 export default ({ styleClass }) => {
   return (
-    <ul
-      style={{ margin: "auto" }}
-      className={`social-links ${styleClass ? styleClass : ""}`}
-    >
-      {links}
-    </ul>
+    <ul className={`social-links ${styleClass ? styleClass : ""}`}>{links}</ul>
   )
 }

@@ -389,6 +389,10 @@ Sidebar Animation
 .sidebar-icons li:nth-of-type(5) {
   animation-delay: 1.25s;
 }
+.sidebar-icons {
+  margin: auto;
+}
+
 @keyframes slideUp {
   0% {
     transform: translateY(200px);
