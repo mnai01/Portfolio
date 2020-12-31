@@ -193,6 +193,7 @@ p {
   width: 7rem;
   display: flex;
   justify-content: space-between;
+  margin: auto;
 }
 .social-link {
   font-size: 1.75rem;
@@ -291,7 +292,7 @@ Sidebar
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   z-index: 999;
   display: grid;
