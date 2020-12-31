@@ -653,6 +653,22 @@ Jobs
     box-shadow: -2px 0 var(--clr-primary-5);
   }
 }
+@media screen and (max-width: 475px) {
+  .job-btn {
+    font-size: 1rem;
+  }
+  .section-title {
+    margin-bottom: 0rem;
+    text-align: center;
+  }
+  .btn-container {
+    display: block;
+    text-align: center;
+  }
+  .job-btn {
+    padding: 1.5rem 0;
+  }
+}
 
 /*
 =============== 
@@ -1140,7 +1156,7 @@ Email Modal
   /* box-shadow: var(--light-shadow); */
   transition: var(--transition);
   width: 90vw;
-  max-width: 35rem;
+  max-width: 30rem;
 }
 .email-form:hover {
 }
@@ -1199,4 +1215,12 @@ Email Modal
   border-width: 3px;
   border-style: solid;
   border-radius: var(--radius);
+}
+@media screen and (max-width: 600px) {
+  .email-form {
+    max-width: 17rem;
+  }
+  .email-form-group {
+    padding: 0.5rem 0rem;
+  }
 }
