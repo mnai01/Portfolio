@@ -17,6 +17,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-smoothscroll`,
+    "gatsby-plugin-robots-txt",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,6 +41,14 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Roboto\:400,700`, `Open Sans`],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.ianmatlak.com",
+        sitemap: null,
+        policy: [{ userAgent: "*", disallow: "/" }],
       },
     },
   ],
