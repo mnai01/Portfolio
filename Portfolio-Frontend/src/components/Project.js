@@ -68,16 +68,32 @@ const Project = ({
             </div>
           </div>
           <div className="project-links">
-            <a href={github}>
+            <a
+              href={github}
+              // Prevents Parent modal from opening when icon clicked
+              onClick={e => {
+                e.stopPropagation()
+              }}
+            >
               <FaGithubSquare className="project-icon" />
             </a>
             {url != null && url != "" && (
-              <a href={url}>
+              <a
+                href={url}
+                onClick={e => {
+                  e.stopPropagation()
+                }}
+              >
                 <FaShareSquare className="project-icon" />
               </a>
             )}
             {video != null && (
-              <a href={video}>
+              <a
+                href={video}
+                onClick={e => {
+                  e.stopPropagation()
+                }}
+              >
                 <FaYoutube className="project-icon" />
               </a>
             )}
