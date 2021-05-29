@@ -48,7 +48,7 @@ module.exports = {
       options: {
         host: "https://www.ianmatlak.com",
         sitemap: null,
-        policy: [{ userAgent: "*", disallow: "/" }],
+        policy: [{ userAgent: "*", disallow: ["/"] }],
       },
     },
   ],

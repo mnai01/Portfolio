@@ -44,10 +44,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO
-        title="Ian Matlak | Portfolio"
-        description="This is Ian Matlak's portfolio"
-      />
+      <SEO title="Ian M | Portfolio" description="This is Ian M portfolio" />
       <Hero />
       {/* <Services /> */}
       <Jobs />
