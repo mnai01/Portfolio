@@ -1,11 +1,9 @@
-import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout"
+import React from "react"
 import Hero from "../components/Hero"
-import Services from "../components/Services"
 import Jobs from "../components/Jobs"
+import Layout from "../components/Layout"
 import Projects from "../components/Projects"
-import ProjectsCards from "../components/ProjectsCards"
 import SEO from "../components/SEO"
 
 // allStrapiProjects(filter: { feature: { eq: true } })
@@ -24,6 +22,9 @@ export const query = graphql`
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
+            }
+            fixed {
+              ...GatsbyImageSharpFixed
             }
           }
         }

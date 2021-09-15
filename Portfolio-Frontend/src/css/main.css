@@ -511,6 +511,12 @@ Hero
   }
 }
 
+@media screen and (max-width: 1450px) {
+  .hero-img {
+    width: 75%;
+  }
+}
+
 /*
 =============== 
 Services

@@ -1,9 +1,8 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
 import Image from "gatsby-image"
+import React, { useEffect, useState } from "react"
 import { FaGithubSquare, FaShareSquare, FaYoutube } from "react-icons/fa"
-import "react-responsive-modal/styles.css"
 import { Modal } from "react-responsive-modal"
+import "react-responsive-modal/styles.css"
 
 const Project = ({
   description,
@@ -18,6 +17,22 @@ const Project = ({
 }) => {
   const [modal, setModal] = useState(false)
 
+  const [isMobile, setIsMobile] = useState(false)
+
+  //choose the screen size
+  const handleResize = () => {
+    if (window.innerWidth < 992) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  }
+
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+  })
+
   return (
     <>
       <Modal open={modal} onClose={() => setModal(false)}>
@@ -26,7 +41,17 @@ const Project = ({
             {index + 1 <= 9 ? 0 + "" + (index + 1) : index + 1}.
           </span>
           <h3>{title}</h3>
-          <Image className="modal_img" fluid={image.childImageSharp.fluid} />
+          <Image
+            className="modal_img"
+            fixed={image.childImageSharp.fixed}
+            imgStyle={{ objectFit: "contain" }}
+            style={{
+              height: "40vh",
+              width: "100%",
+              background: "var(--clr-grey-10)",
+              borderRadius: "10px",
+            }}
+          />
           <p className="project-desc">
             {longDescription != null ? longDescription : description}
           </p>
@@ -53,7 +78,17 @@ const Project = ({
         </div>
       </Modal>
       <article className="project">
-        <Image className="project-img" fluid={image.childImageSharp.fluid} />
+        {isMobile ? (
+          <div onClick={setModal}>
+            <Image
+              className="project-img"
+              fluid={image.childImageSharp.fluid}
+            />
+          </div>
+        ) : (
+          <Image className="project-img" fluid={image.childImageSharp.fluid} />
+        )}
+
         <div className="project-info" onClick={setModal}>
           <div>
             <span className="project-number">
