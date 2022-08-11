@@ -667,13 +667,6 @@ Jobs
     margin-bottom: 0rem;
     text-align: center;
   }
-  .btn-container {
-    display: block;
-    text-align: center;
-  }
-  .job-btn {
-    padding: 1.5rem 0;
-  }
 }
 
 /*
@@ -1228,5 +1221,14 @@ Email Modal
   }
   .email-form-group {
     padding: 0.5rem 0rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .job-btn {
+    padding: 1.5rem 0;
+  }
+  .btn-container {
+    flex-direction: column;
+    text-align: center;
   }
 }
