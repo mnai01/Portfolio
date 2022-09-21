@@ -61,15 +61,17 @@ const Project = ({
             })}
           </div>
           <div className="project-links">
-            <a href={github}>
-              <FaGithubSquare className="project-icon" />
-            </a>
-            {url != null && url != "" && (
+            {github !== null && github !== "" && (
+              <a href={github}>
+                <FaGithubSquare className="project-icon" />
+              </a>
+            )}
+            {url !== null && url !== "" && (
               <a href={url}>
                 <FaShareSquare className="project-icon" />
               </a>
             )}
-            {video != null && (
+            {video !== null && video !== "" && (
               <a href={video}>
                 <FaYoutube className="project-icon" />
               </a>
@@ -103,15 +105,17 @@ const Project = ({
             </div>
           </div>
           <div className="project-links">
-            <a
-              href={github}
-              // Prevents Parent modal from opening when icon clicked
-              onClick={e => {
-                e.stopPropagation()
-              }}
-            >
-              <FaGithubSquare className="project-icon" />
-            </a>
+            {github !== null && github !== "" && (
+              <a
+                href={github}
+                // Prevents Parent modal from opening when icon clicked
+                onClick={e => {
+                  e.stopPropagation()
+                }}
+              >
+                <FaGithubSquare className="project-icon" />
+              </a>
+            )}
             {url != null && url != "" && (
               <a
                 href={url}

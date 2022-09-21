@@ -30,8 +30,6 @@ const Jobs = () => {
 
   const [value, setValue] = React.useState(0)
   const { company, position, date, description } = jobs[value]
-  console.log(jobs[value])
-  console.log(data)
 
   return (
     <section className="section jobs" id="experience">

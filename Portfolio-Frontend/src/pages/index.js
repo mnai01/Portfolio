@@ -18,6 +18,7 @@ export const query = graphql`
         video
         description
         longDescription
+        feature
         image {
           childImageSharp {
             fluid {
