@@ -1,54 +1,56 @@
 {
-  "kind": "collectionType",
-  "collectionName": "projects",
-  "info": {
-    "name": "Project"
-  },
-  "options": {
-    "increments": true,
-    "timestamps": true
-  },
-  "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
+    "kind": "collectionType",
+    "collectionName": "projects",
+    "info": {
+        "name": "Project",
+        "description": ""
     },
-    "description": {
-      "type": "text",
-      "required": true
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": false
     },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "files",
-        "images",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": true
-    },
-    "github": {
-      "type": "string"
-    },
-    "url": {
-      "type": "string"
-    },
-    "feature": {
-      "type": "boolean",
-      "required": true
-    },
-    "stack": {
-      "type": "component",
-      "repeatable": true,
-      "component": "description.stack-item",
-      "required": true
-    },
-    "video": {
-      "type": "string"
-    },
-    "longDescription": {
-      "type": "richtext"
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "text",
+            "required": true
+        },
+        "image": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": ["files", "images", "videos"],
+            "plugin": "upload",
+            "required": true
+        },
+        "github": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        },
+        "feature": {
+            "type": "boolean",
+            "required": true
+        },
+        "stack": {
+            "type": "component",
+            "repeatable": true,
+            "component": "description.stack-item",
+            "required": true
+        },
+        "video": {
+            "type": "string"
+        },
+        "longDescription": {
+            "type": "richtext"
+        },
+        "top": {
+            "type": "boolean",
+            "default": false
+        }
     }
-  }
 }
