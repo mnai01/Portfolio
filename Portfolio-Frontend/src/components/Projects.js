@@ -1,10 +1,50 @@
 import React from "react"
 import Title from "./Title"
 import Project from "./Project"
-import { Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
-const Projects = ({ projects, title, showlink }) => {
+export const query = graphql`
+  {
+    allStrapiProjects {
+      nodes {
+        id
+        title
+        github
+        url
+        video
+        description
+        longDescription
+        feature
+        top
+        stack {
+          title
+          id
+        }
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+            fixed {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+const Projects = ({ title, showlink }) => {
+  let {
+    allStrapiProjects: { nodes: projects },
+  } = useStaticQuery(query)
+  projects = [
+    ...projects.filter(item => item.top === true),
+    ...projects.filter(item => item.top !== true),
+  ]
   console.log(projects)
+
   return (
     <section className="section projects" id="projects">
       <Title title={title} />
